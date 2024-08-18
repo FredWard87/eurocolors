@@ -1,0 +1,15 @@
+<div class="header-container">
+  <h1>HERRAMIENTAS</h1>
+  <input type="text" class="search-box" placeholder="Buscar..." (input)="onSearch($event)">
+</div>
+
+<div class="catalog-container">
+  <div *ngFor="let producto of filteredHerramientas" class="product-card">
+    <img [src]="producto.itemImageSrc" [alt]="producto.alt" [title]="producto.title" class="product-image" />
+    <div class="product-info">
+      <h3 class="product-name">{{ producto.title }}</h3>
+      <p class="product-code">{{ producto.code }}</p>
+    </div>
+  </div>
+</div>
+

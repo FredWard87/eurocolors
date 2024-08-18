@@ -1,0 +1,23 @@
+<p-sidebar [(visible)]="sidebarVisible" styleClass="custom-sidebar">
+  <h3>Menú</h3>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
+    <li><a routerLink="/acerca" routerLinkActive="active">Acerca de</a></li>
+    <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+    <li>
+      <a href="#" (click)="toggleCatalogoProductosSubMenu()">Catálogo de Productos</a>
+      <ul *ngIf="showCatalogoProductosSubMenu">
+        <li><a routerLink="/pigmentos" routerLinkActive="active">Pigmentos</a></li>
+        <li><a routerLink="/colores-pasta" routerLinkActive="active">Colores de Pasta</a></li>
+        <li><a routerLink="/granilla" routerLinkActive="active">Granilla</a></li>
+        <li><a routerLink="/esmaltes" routerLinkActive="active">Esmaltes</a></li>
+        <li><a routerLink="/materias-primas" routerLinkActive="active">Materias Primas</a></li>
+        <li><a routerLink="/aditivos" routerLinkActive="active">Aditivos</a></li>
+        <li><a routerLink="/herramientas" routerLinkActive="active">Herramientas</a></li>
+        <li><a routerLink="/otros" routerLinkActive="active">Otros</a></li>
+      </ul>
+    </li>
+  </ul>
+</p-sidebar>
+
+<p-button (click)="toggleSidebar()" icon="pi pi-bars" class="p-button"></p-button>

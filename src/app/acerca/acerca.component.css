@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f7fac1;
+    color: #333;
+}
+
+.empresa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.empresa h1 {
+    font-size: 2.5rem;
+    color: #000000; /* Color verde pastel */
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.empresa {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.antecedentes, .mision-vision-valores, .politica {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffffbe;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f2f4f5; /* Color de fondo pastel */
+}
+
+.antecedentes:hover, .mision-vision-valores:hover, .politica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.antecedentes h2, .mision-vision-valores h2, .politica h2 {
+    color: #050505; /* Color rosa pastel */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-bottom: 2px solid #000000; /* Color rosa pastel */
+    padding-bottom: 10px;
+}
+
+.valores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valores ul li {
+    margin-bottom: 10px;
+    background-color: #e9f1ff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #e0f7fa; /* Color azul pastel */
+}
+
+.valores ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.politica p {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .empresa, .antecedentes, .mision-vision-valores, .politica {
+        margin: 20px auto;
+        max-width: 800px;
+    }
+}
+
+/* Estilos adicionales para el sidebar */
+.custom-sidebar h3, .custom-sidebar ul li a {
+    text-transform: capitalize;
+}

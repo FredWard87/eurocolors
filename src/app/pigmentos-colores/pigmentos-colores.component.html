@@ -1,0 +1,284 @@
+
+<div class="header-container">
+  <h1>PIGMENTOS</h1>
+  <input type="text" class="search-box" placeholder="Buscar..." (input)="searchProduct($event)">
+</div>
+
+<div class="catalog-container">
+  <div *ngFor="let producto of filteredProductosPigmentos" class="product-card">
+    <img [src]="producto.itemImageSrc" [alt]="producto.alt" [title]="producto.title" class="product-image" />
+    <div class="product-info">
+      <h3 class="product-name">{{ producto.title }}</h3>
+      <p class="product-code">{{ producto.alt }}</p>
+    </div>
+  </div>
+
+  
+    <!-- Contenido estático existente 
+    <div class="product-card">
+        <img src="assets/images/pigmento1.png" alt="Pigmento 2" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Amarrillo</h3>
+          <p class="product-code">CE4501</p>
+        </div>
+      </div>
+    
+    <div class="product-card">
+      <img src="assets/images/pigmento2.png" alt="Pigmento 2" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Naranja</h3>
+        <p class="product-code">CE3001</p>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="assets/images/pigmento3.png" alt="Pigmento 3" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Azul</h3>
+        <p class="product-code">CE5527</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento4.png" alt="Pigmento 4" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Café</h3>
+        <p class="product-code">CE8955</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento5.png" alt="Pigmento 5" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Café rojizo</h3>
+        <p class="product-code">CE8853</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento6.png" alt="Pigmento 6" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Negro</h3>
+        <p class="product-code">CE5208</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento7.png" alt="Pigmento 7" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rosa</h3>
+        <p class="product-code">CE6344</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento8.png" alt="Pigmento 8" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Negro grisáceo</h3>
+        <p class="product-code">CE5229</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento9.png" alt="Pigmento 9" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Jade</h3>
+        <p class="product-code">CE7030</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento10.png" alt="Pigmento 10" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rex</h3>
+        <p class="product-code">CE5641</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento11.png" alt="Pigmento 11" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Hoja</h3>
+        <p class="product-code">CE7122</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento12.png" alt="Pigmento 12" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Lima</h3>
+        <p class="product-code">CE4627</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento13.png" alt="Pigmento 13" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rojo intenso</h3>
+        <p class="product-code">CE6066</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento14.png" alt="Pigmento 14" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Marrón anaranjado</h3>
+        <p class="product-code">CE8871</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento15.png" alt="Pigmento 15" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rosa</h3>
+        <p class="product-code">CE6356</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento16.png" alt="Pigmento 16" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Nacar</h3>
+        <p class="product-code">CE6440</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento17.png" alt="Pigmento 17" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Naranja A.</h3>
+        <p class="product-code">CE8725</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento18.png" alt="Pigmento 18" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Cobalto</h3>
+        <p class="product-code">CE5711</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento19.png" alt="Pigmento 19" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Amarrillo H.</h3>
+        <p class="product-code">CE4544</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento20.png" alt="Pigmento 20" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Cobalto</h3>
+        <p class="product-code">CE5602</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento21.png" alt="Pigmento 21" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Blanco</h3>
+        <p class="product-code">CE0001</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento22.png" alt="Pigmento 22" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Morado</h3>
+        <p class="product-code">CE6515</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento23.png" alt="Pigmento 23" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Tangenina</h3>
+        <p class="product-code">CE3000</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento24.png" alt="Pigmento 24" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rojo</h3>
+        <p class="product-code">CE6070</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento25.png" alt="Pigmento 25" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Gris</h3>
+        <p class="product-code">CE5159</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento26.png" alt="Pigmento 26" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Menta</h3>
+        <p class="product-code">CE7301</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento27.png" alt="Pigmento 27" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Marrón</h3>
+        <p class="product-code">CE6602</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento28.png" alt="Pigmento 28" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Verde mayo</h3>
+        <p class="product-code">CE7521</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento29.png" alt="Pigmento 29" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Cereza</h3>
+        <p class="product-code">CE6540</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento30.png" alt="Pigmento 30" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Lila</h3>
+        <p class="product-code">CE8515</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento31.png" alt="Pigmento 31" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Verde esmeralda</h3>
+        <p class="product-code">CE7260</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento32.png" alt="Pigmento 32" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Amarrillo H.</h3>
+        <p class="product-code">CE4563</p>
+      </div>
+    </div>
+  
+    <div class="product-card">
+      <img src="assets/images/pigmento33.png" alt="Pigmento 33" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Café</h3>
+        <p class="product-code">CE8841</p>
+      </div>
+    </div>
+     Agrega más tarjetas de productos aquí -->
+  </div>
+  
+  

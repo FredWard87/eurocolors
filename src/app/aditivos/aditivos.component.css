@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  text-align: center;
+  padding: 5px 0;
+  background-color: #dde0e3b8;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+.catalog-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #dde0e3c4;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(20% - 20px); /* Ajustado para que quepan 5 tarjetas con espacio entre ellas */
+  height: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin: 10px 0;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.product-code {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+

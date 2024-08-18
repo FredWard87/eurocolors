@@ -1,0 +1,124 @@
+/* Importaciones necesarias */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap');
+
+/* styles.css */
+/* Estilos Globales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Serif', sans-serif;
+  background-color: #f8f9fa;
+  background-image: url('https://blog.sicer.es/wp-content/uploads/2021/07/copertina-1.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen al fondo para un efecto de parallax */
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #f2f4f7b0; /* Fondo semi-transparente para visibilidad sobre la imagen */
+  color: #ecf0f1;
+  padding: 1rem;
+  box-shadow: 0 2px 4px #f2f4f7af;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f4f7a1;
+}
+
+.logo-elegante {
+  height: 100px;
+ 
+  transition: transform 0.3s ease;
+}
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #f2f4f7b1;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.download-button {
+  background-color: #6b7987;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-button:hover {
+  background-color: #8b99a7;
+  transform: scale(1.05);
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 120px; /* Ajusta el espacio superior para el encabezado fijo */
+}
+
+.lateral {
+  flex: 1;
+  padding: 50px;
+}
+
+.central {
+  flex: 100; /* Cambié de 100 a 2 para que ocupe el espacio restante */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #f2f4f7a9; /* Fondo semi-transparente para visibilidad sobre la imagen */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 1rem;
+  position: relative; /* Cambiado de fixed a relative para que no se superponga */
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 4px #f2f4f79e;
+  z-index: 1000;
+}

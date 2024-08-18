@@ -1,0 +1,49 @@
+<div class="header-container">
+  <h1>OTROS</h1>
+  <input type="text" class="search-box" placeholder="Buscar..." (input)="searchProduct($event)">
+</div>
+
+<div class="catalog-container">
+  <div *ngFor="let producto of filteredProductosOtros" class="product-card">
+    <img [src]="producto.itemImageSrc" [alt]="producto.alt" [title]="producto.title" class="product-image" />
+    <div class="product-info">
+      <h3 class="product-name">{{ producto.title }}</h3>
+      <p class="product-code">{{ producto.alt }}</p>
+    </div>
+  </div>
+</div>
+
+  
+  <!-- <div class="catalog-container">
+    <div class="product-card">
+      <img src="assets/images/otro1.png" alt="Pigmento 1" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rafia calibre #2</h3>
+        <p class="product-code"></p>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="assets/images/otro2.png" alt="Pigmento 2" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Cordón para molde de prensa</h3>
+        <p class="product-code">EMT532</p>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="assets/images/otro3.png" alt="Pigmento 3" class="product-image" />
+      <div class="product-info">
+        <h3 class="product-name">Rafia calibre #4</h3>
+        <p class="product-code"></p>
+      </div>
+    </div>
+
+    <div class="product-card">
+        <img src="assets/images/otro4.png" alt="Pigmento 4" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Lápices cerámicos</h3>
+          <p class="product-code"></p>
+        </div>
+  </div>-->
+

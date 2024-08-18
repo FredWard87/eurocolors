@@ -1,0 +1,45 @@
+<body>
+  <div class="main">
+    <div class="header header-flex">
+      <img src="assets/images/eurocolor.png" alt="Logo de Eurocolor" class="logo-elegante" />
+      <div class="spacer"></div>
+      
+
+
+      <a href="assets/Catalogó de productos Eurocolor.pdf" class="download-button" download>Descargar Catálogo</a>
+    </div>
+
+    <div class="content">
+      <div class="lateral">
+        <app-nav-menu></app-nav-menu>
+      </div>
+      <div class="central">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <div class="footer">
+      <footer>
+        <!-- Contenido del pie de página si es necesario -->
+        <p>&copy; 2024 Eurocolor</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function searchProduct() {
+      let searchText = document.getElementById("searchInput").value.toLowerCase();
+      let products = document.querySelectorAll(".product");
+
+      products.forEach(function(product) {
+        let productName = product.querySelector(".product-name").textContent.toLowerCase();
+
+        if (productName.includes(searchText)) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
