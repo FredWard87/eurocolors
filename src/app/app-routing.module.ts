@@ -6,11 +6,11 @@ import { InicioComponent } from './inicio/inicio.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CatalogoProductosComponent } from './catalogo-productos/catalogo-productos.component';
-import { ColoresPastaComponent } from './catalogo-productos/colores-pasta/colores-pasta/colores-pasta.component';
-import { EsmaltesComponent } from './catalogo-productos/esmaltes/esmaltes/esmaltes.component';
-import { GranillaComponent } from './catalogo-productos/granilla/granilla/granilla.component';
-import { AditivosComponent } from './catalogo-productos/aditivos/aditivos/aditivos.component';
-import { PigmentosColoresComponent } from './catalogo-productos/pigmentos-colores/pigmentos-colores/pigmentos-colores.component';
+import { ColoresPastaComponent } from './colores-pasta/colores-pasta.component';
+import { EsmaltesComponent } from './esmaltes/esmaltes.component';
+import { GranillaComponent } from './granilla/granilla.component';
+import { AditivosComponent } from './aditivos/aditivos.component';
+import { PigmentosColoresComponent } from './pigmentos-colores/pigmentos-colores.component';
 
 
 const routes: Routes = [
