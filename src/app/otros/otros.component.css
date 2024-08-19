@@ -34,7 +34,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: calc(20% - 20px); /* Ajustado para que quepan 5 tarjetas con espacio entre ellas */
+  width: calc(20% - 20px); /* 5 tarjetas por fila en pantallas grandes */
   height: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 1s ease-in-out;
@@ -81,5 +81,27 @@ body {
   }
 }
 
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+  .product-card {
+    width: calc(25% - 20px); /* 4 tarjetas por fila */
+  }
+}
 
-  
+@media (max-width: 992px) {
+  .product-card {
+    width: calc(33.33% - 20px); /* 3 tarjetas por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px); /* 2 tarjetas por fila */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    width: calc(100% - 20px); /* 1 tarjeta por fila */
+  }
+}

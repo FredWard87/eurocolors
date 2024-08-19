@@ -1,4 +1,9 @@
-import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+
+interface ResponsiveOption {
+  breakpoint: string;
+  numVisible: number;
+}
 
 @Component({
   selector: 'app-inicio',
@@ -10,7 +15,7 @@ export class InicioComponent implements OnInit {
   sidebarVisible = false;
   showCatalogoProductosSubMenu = false;
   images: any[] = [];
-  responsiveOptions: any[] = [];
+  responsiveOptions: ResponsiveOption[] = [];
 
   ngOnInit() {
     this.responsiveOptions = [
@@ -35,13 +40,17 @@ export class InicioComponent implements OnInit {
     ];
   }
 
-  toggleCatalogoProductosSubMenu() {
-    this.showCatalogoProductosSubMenu = !this.showCatalogoProductosSubMenu;
-    console.log('showCatalogoProductosSubMenu:', this.showCatalogoProductosSubMenu);
-  }
-
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
+    console.log('sidebarVisible:', this.sidebarVisible);
+  }
+
+  onSidebarItemClick() {
+    this.closeSidebar();
+  }
+
+  closeSidebar() {
+    this.sidebarVisible = false;
     console.log('sidebarVisible:', this.sidebarVisible);
   }
 }

@@ -1,3 +1,4 @@
+/* Estilos generales */
 .menu-button {
   display: inline-block;
   cursor: pointer;
@@ -12,9 +13,11 @@
   transition: 0.3s;
 }
 
+/* Sidebar personalizado */
 .custom-sidebar {
   background-color: #f0f0f0; /* Gris claro */
   width: 350px;
+  max-width: 100%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 5px;
 }
@@ -76,4 +79,47 @@
 
 .custom-sidebar img:hover {
   transform: scale(1.05);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .custom-sidebar {
+    width: 250px;
+    padding: 10px;
+  }
+
+  .custom-sidebar h3 {
+    font-size: 1.3rem;
+  }
+
+  .custom-sidebar ul li a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .menu-button .bar {
+    width: 20px;
+    height: 2.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .custom-sidebar h3 {
+    font-size: 1.2rem;
+  }
+
+  .custom-sidebar ul li a {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .menu-button .bar {
+    width: 18px;
+    height: 2px;
+  }
 }

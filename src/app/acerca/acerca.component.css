@@ -7,19 +7,6 @@ body {
     color: #333;
 }
 
-.empresa:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.empresa h1 {
-    font-size: 2.5rem;
-    color: #000000; /* Color verde pastel */
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    font-weight: bold;
-}
-
 .empresa {
     text-align: center;
     padding: 20px;
@@ -27,14 +14,26 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.empresa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.empresa h1 {
+    font-size: 2.5rem;
+    color: #000000; /* Color negro para el título */
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
 .antecedentes, .mision-vision-valores, .politica {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #ffffffbe;
+    background-color: #f2f4f5; /* Color de fondo pastel */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f2f4f5; /* Color de fondo pastel */
 }
 
 .antecedentes:hover, .mision-vision-valores:hover, .politica:hover {
@@ -43,12 +42,12 @@ body {
 }
 
 .antecedentes h2, .mision-vision-valores h2, .politica h2 {
-    color: #050505; /* Color rosa pastel */
+    color: #050505; /* Color negro para los subtítulos */
     font-size: 1.8rem;
     margin-bottom: 15px;
     text-transform: capitalize;
     font-weight: bold;
-    border-bottom: 2px solid #000000; /* Color rosa pastel */
+    border-bottom: 2px solid #000000; /* Color negro para la línea */
     padding-bottom: 10px;
 }
 
@@ -59,12 +58,11 @@ body {
 
 .valores ul li {
     margin-bottom: 10px;
-    background-color: #e9f1ff;
+    background-color: #e0f7fa; /* Color azul pastel */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #e0f7fa; /* Color azul pastel */
 }
 
 .valores ul li:hover {
@@ -83,7 +81,17 @@ body {
     }
 }
 
-/* Estilos adicionales para el sidebar */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    .empresa, .antecedentes, .mision-vision-valores, .politica {
+        padding: 15px;
+        max-width: 100%; /* Asegura que los elementos usen el 100% del ancho disponible */
+    }
+}
+
 .custom-sidebar h3, .custom-sidebar ul li a {
     text-transform: capitalize;
 }

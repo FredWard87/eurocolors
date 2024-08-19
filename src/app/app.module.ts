@@ -19,6 +19,8 @@ import { AditivosComponent } from './aditivos/aditivos.component';
 import { HerramientasComponent } from './herramientas/herramientas.component';
 import { OtrosComponent } from './otros/otros.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { OtrosComponent } from './otros/otros.component';
     AcercaComponent,
     InicioComponent,
     MateriasPrimasComponent,
-    HerramientasComponent
+    HerramientasComponent,
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

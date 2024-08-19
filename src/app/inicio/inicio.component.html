@@ -1,24 +1,43 @@
-<div class="central">
-  <div class="custom-carousel">
-      <p-carousel 
-          [value]="images" 
-          [numVisible]="1" 
-          [numScroll]="1" 
-          [circular]="true" 
-          [responsiveOptions]="responsiveOptions" 
-          [autoplayInterval]="3000" 
-          [transitionOptions]="{ easing: 'ease-in-out', duration: 500 }">
-          
-          <ng-template pTemplate="item" let-item>
-              <div class="p-carousel-item">
-                  <img [src]="item.itemImageSrc" [alt]="item.alt" />
-              </div>
-          </ng-template>
-          
-          <ng-template pTemplate="thumbnail" let-item>
-              <div class="custom-thumbnail">
-                  <img [src]="item.thumbnailImageSrc" [alt]="item.title" />
-              </div>
-          </ng-template>
-      </p-carousel>
-  </div>
+<div class="sidebar" [ngClass]="{'hidden': !sidebarVisible}">
+    <ul>
+      <li (click)="onSidebarItemClick()">Inicio</li>
+      <li (click)="onSidebarItemClick()">Acerca</li>
+      <li (click)="onSidebarItemClick()">Contacto</li>
+      <li (click)="onSidebarItemClick()">Materias primas</li>
+      <li (click)="onSidebarItemClick()">Otros</li>
+      <li (click)="onSidebarItemClick()">Pigmentos</li>
+      <li (click)="onSidebarItemClick()">Herramientas</li>
+      <li (click)="onSidebarItemClick()">Granilla</li>
+      <li (click)="onSidebarItemClick()">Esmaltes</li>
+      <li (click)="onSidebarItemClick()">Aditivos</li>
+    </ul>
+</div>
+
+<!-- Código del botón para abrir/cerrar el sidebar -->
+<button (click)="toggleSidebar()">Toggle Sidebar</button>
+
+<!-- Tu carousel -->
+<div class="custom-carousel">
+  <p-carousel 
+      [value]="images" 
+      [numVisible]="1" 
+      [numScroll]="1" 
+      [circular]="true" 
+      [autoplayInterval]="3000" 
+      [transitionOptions]="{ easing: 'ease-in-out', duration: 500 }">
+      
+      <ng-template pTemplate="item" let-item>
+          <div class="p-carousel-item">
+              <img [src]="item.itemImageSrc" [alt]="item.alt" />
+          </div>
+      </ng-template>
+      
+      <ng-template pTemplate="thumbnail" let-item>
+          <div class="custom-thumbnail">
+              <img [src]="item.thumbnailImageSrc" [alt]="item.title" />
+          </div>
+      </ng-template>
+  </p-carousel>
+</div>
+
+  

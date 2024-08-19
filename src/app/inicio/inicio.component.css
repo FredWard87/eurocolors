@@ -1,13 +1,47 @@
+/* Estilo para el sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #444;
+}
+
+/* Estilo para el carousel */
 .custom-carousel {
-  margin: 20px auto; /* Centra el carrusel horizontalmente con margen automático */
+  margin: 20px auto;
   padding: 20px;
-  background-color: rgba(242, 244, 246, 0.7); /* Fondo gris muy claro con mayor transparencia */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  border-radius: 12px; /* Bordes redondeados */
-  max-width: 1000px; /* Ancho máximo del carrusel */
-  animation: fadeIn 1s ease-in-out; /* Animación de entrada */
-  width: 100%; /* Asegura que el carrusel use el ancho disponible */
-  box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+  background-color: rgba(242, 244, 246, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -22,61 +56,112 @@
 .p-carousel .p-carousel-item {
   position: relative;
   display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
-  height: 400px; /* Altura del carrusel */
-  overflow: hidden; /* Oculta el contenido desbordado */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .p-carousel .p-carousel-item img {
-  width: 100%; /* Ajusta el ancho de la imagen al contenedor */
-  height: auto; /* Mantiene la proporción original */
-  max-height: 100%; /* Limita la altura máxima de la imagen */
-  object-fit: cover; /* Recorta la imagen para llenar el contenedor */
-  border-radius: 3px; /* Bordes redondeados en las imágenes */
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
 }
 
 .custom-thumbnail {
-  margin: 0 8px; /* Espacio alrededor de las miniaturas */
-  transition: transform 0.3s ease-in-out; /* Transición al pasar el ratón */
-  cursor: pointer; /* Cambia el cursor a mano al pasar el ratón */
-  border-radius: 8px; /* Bordes redondeados en las miniaturas */
-  overflow: hidden; /* Asegura que la imagen no se desborde */
+  margin: 0 8px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .custom-thumbnail img {
-  width: 120px; /* Tamaño de las miniaturas */
-  height: 120px; /* Ajusta la altura de las miniaturas */
-  border-radius: 8px; /* Bordes redondeados en las miniaturas */
-  object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .custom-thumbnail:hover {
-  transform: scale(1.1); /* Escala las miniaturas al pasar el ratón */
+  transform: scale(1.1);
 }
 
 .p-carousel .p-carousel-nav-prev,
 .p-carousel .p-carousel-nav-next {
-  background-color: #00796b; /* Color verde oscuro para los controles */
-  border-radius: 50%; /* Hace los controles redondos */
-  width: 50px; /* Ancho de los botones de navegación */
-  height: 50px; /* Altura de los botones de navegación */
+  background-color: #00796b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
-  align-items: center; /* Centra el icono verticalmente */
-  justify-content: center; /* Centra el icono horizontalmente */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en los controles */
-  z-index: 1; /* Asegura que los controles estén por encima de otros elementos */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .p-carousel .p-carousel-nav-prev:hover,
 .p-carousel .p-carousel-nav-next:hover {
-  background-color: #004d40; /* Color verde más oscuro al pasar el ratón */
+  background-color: #004d40;
 }
 
 .p-carousel .p-carousel-nav-prev .p-carousel-nav-icon,
 .p-carousel .p-carousel-nav-next .p-carousel-nav-icon {
-  color: white; /* Color del icono en los botones de navegación */
+  color: white;
 }
 
+/* Media Queries */
+@media (max-width: 1200px) {
+  .custom-carousel {
+    padding: 15px;
+  }
+
+  .p-carousel .p-carousel-item {
+    height: 300px;
+  }
+
+  .custom-thumbnail img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .p-carousel .p-carousel-item {
+    height: 250px;
+  }
+
+  .custom-thumbnail img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-carousel .p-carousel-item {
+    height: 200px;
+  }
+
+  .custom-thumbnail img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-carousel {
+    padding: 10px;
+  }
+
+  .p-carousel .p-carousel-item {
+    height: 180px;
+  }
+
+  .custom-thumbnail img {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 

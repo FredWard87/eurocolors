@@ -81,3 +81,40 @@ body {
   }
 }
 
+/* Media Queries para Responsividad */
+
+/* Ajustes para pantallas grandes (escritorios) */
+@media (min-width: 1200px) {
+  .product-card {
+    width: calc(20% - 20px); /* 5 tarjetas por fila */
+  }
+}
+
+/* Ajustes para tabletas y pantallas más pequeñas */
+@media (max-width: 1199px) {
+  .product-card {
+    width: calc(25% - 20px); /* 4 tarjetas por fila */
+  }
+}
+
+/* Ajustes para pantallas más pequeñas (móviles) */
+@media (max-width: 992px) {
+  .product-card {
+    width: calc(33.33% - 20px); /* 3 tarjetas por fila */
+  }
+}
+
+/* Ajustes para móviles en orientación vertical */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px); /* 2 tarjetas por fila */
+  }
+}
+
+/* Ajustes para móviles muy pequeños */
+@media (max-width: 480px) {
+  .product-card {
+    width: calc(100% - 20px); /* 1 tarjeta por fila */
+  }
+}
+

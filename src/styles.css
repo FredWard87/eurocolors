@@ -48,10 +48,8 @@ body {
 
 .logo-elegante {
   height: 100px;
- 
   transition: transform 0.3s ease;
 }
-
 
 .header-actions {
   display: flex;
@@ -105,7 +103,7 @@ body {
 }
 
 .central {
-  flex: 100; /* Cambié de 100 a 2 para que ocupe el espacio restante */
+  flex: 2;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -121,4 +119,74 @@ body {
   bottom: 0;
   box-shadow: 0 -2px 4px #f2f4f79e;
   z-index: 1000;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-elegante {
+    height: 80px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .download-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lateral {
+    padding: 20px;
+  }
+
+  .central {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-flex {
+    align-items: center;
+  }
+
+  .logo-elegante {
+    height: 60px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-container, .download-button {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .lateral {
+    padding: 10px;
+  }
+
+  .central {
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .footer {
+    padding: 0.5rem;
+  }
 }
