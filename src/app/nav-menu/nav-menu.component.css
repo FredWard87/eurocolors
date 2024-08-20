@@ -15,11 +15,11 @@
 
 /* Sidebar personalizado */
 .custom-sidebar {
-  background-color: #f0f0f0; /* Gris claro */
-  width: 350px;
-  max-width: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  padding: 5px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semi-transparente */
+    width: 80%; /* Ocupa el 80% del ancho */
+    max-width: 300px; /* Ancho máximo en píxeles */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
 }
 
 .custom-sidebar h3 {
@@ -79,6 +79,20 @@
 
 .custom-sidebar img:hover {
   transform: scale(1.05);
+}
+
+/* Estilos para el submenú */
+.submenu {
+  padding-left: 15px;
+  border-left: 2px solid #ddd;
+  margin-top: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.submenu.active {
+  max-height: 500px; /* Ajusta según lo necesites */
 }
 
 /* Media Queries para responsividad */

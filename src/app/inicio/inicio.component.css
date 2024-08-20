@@ -1,186 +1,256 @@
-/* Estilo para el sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  color: #fff;
-  overflow-y: auto;
-  transition: transform 0.3s ease;
-  transform: translateX(0);
+/* Estilo del contenedor del encabezado */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f8f8; /* Ajusta el color de fondo según tu diseño */
 }
 
-.sidebar.hidden {
-  transform: translateX(-100%);
+.logo img {
+  height: 60px; /* Ajusta según el tamaño que desees */
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.search-bar {
+  display: flex;
+  flex-grow: 1; /* Hace que la barra de búsqueda ocupe todo el espacio disponible */
+  justify-content: center;
+  margin: 0 20px;
 }
 
-.sidebar li {
-  padding: 20px; /* Reducido para mejorar el diseño */
+.search-bar input[type="text"] {
+  width: 100%;
+  max-width: 400px; /* Ajusta el tamaño máximo según tus preferencias */
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #00796b;
+  color: white;
   cursor: pointer;
 }
 
+.search-bar button:hover {
+  background-color: #004d40;
+}
+
+.catalog-button button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog-button button:hover {
+  background-color: #004d40;
+}
+
+/* Estilo para el sidebar */
+.sidebar {
+position: fixed;
+top: 0;
+left: 0;
+width: 250px;
+height: 100%;
+background-color: #333;
+color: #fff;
+overflow-y: auto;
+transition: transform 0.3s ease;
+transform: translateX(0);
+}
+
+.sidebar.hidden {
+transform: translateX(-100%);
+}
+
+.sidebar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar li {
+padding: 20px; /* Reducido para mejorar el diseño */
+cursor: pointer;
+}
+
 .sidebar li:hover {
-  background-color: #444;
+background-color: #444;
 }
 
 .carousel-container {
-  display: flex;
-  flex-direction: column; /* Asegura que el contenido se alinee verticalmente */
-  justify-content: center; /* Centra horizontalmente el contenedor */
-  align-items: center; /* Centra verticalmente el contenedor */
-  width: calc(100% - 200px); /* Ancho completo menos el sidebar */
-  height: 80vh; /* Altura completa de la ventana */
-  margin-left: 30px; /* Espacio a la izquierda para el sidebar */
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
-  padding: 20px; /* Espaciado alrededor del contenedor */
+display: flex;
+justify-content: center; /* Centra horizontalmente el contenedor */
+align-items: center; /* Centra verticalmente el contenedor */
+width: 100%; /* Ancho completo de la página */
+height: 100vh; /* Altura completa de la ventana */
+margin-left: -30%; /* Mueve un poco a la izquierda */
+margin-top: -5%; /* Mueve un poco hacia arriba */
+box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+padding: 20px; /* Espaciado alrededor del contenedor */
 }
 
 /* Estilo para el carousel */
 .custom-carousel {
-  max-width: 900px; /* Ancho máximo del carrusel */
-  width: 100%; /* Ocupa el 100% del contenedor */
-  padding: 20px;
-  background-color: rgba(242, 244, 246, 0.7);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center; /* Centra el contenido dentro del carrusel */
-  align-items: center; /* Centra verticalmente el contenido del carrusel */
+max-width: 900px; /* Ancho máximo del carrusel */
+width: 100%; /* Ocupa el 100% del contenedor */
+padding: 20px;
+background-color: rgba(242, 244, 246, 0.7);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+border-radius: 12px;
+box-sizing: border-box;
+display: flex;
+justify-content: center; /* Centra el contenido dentro del carrusel */
+align-items: center; /* Centra verticalmente el contenido del carrusel */
+animation: fadeIn 1s ease-in-out; /* Animación de desvanecimiento */
 }
 
 /* Animación de desvanecimiento */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+from {
+  opacity: 0;
 }
-
-.custom-carousel {
-  animation: fadeIn 1s ease-in-out;
+to {
+  opacity: 1;
+}
 }
 
 /* Estilos para los elementos del carrusel */
 .p-carousel .p-carousel-item {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+width: 100%;
 }
 
 .p-carousel .p-carousel-item img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 3px;
+width: 100%;
+height: auto;
+max-height: 100%;
+object-fit: cover;
+border-radius: 3px;
 }
 
 .custom-thumbnail {
-  margin: 0 8px;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  border-radius: 8px;
-  overflow: hidden;
+margin: 0 8px;
+transition: transform 0.3s ease-in-out;
+cursor: pointer;
+border-radius: 8px;
+overflow: hidden;
 }
 
 .custom-thumbnail img {
-  width: 120px;
-  height: 120px;
-  border-radius: 8px;
-  object-fit: cover;
+width: 120px;
+height: 120px;
+border-radius: 8px;
+object-fit: cover;
 }
 
 .custom-thumbnail:hover {
-  transform: scale(1.1);
+transform: scale(1.1);
 }
 
 /* Estilos para los botones de navegación del carrusel */
 .p-carousel .p-carousel-nav-prev,
 .p-carousel .p-carousel-nav-next {
-  background-color: #00796b;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1;
+background-color: #00796b;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+z-index: 1;
 }
 
 .p-carousel .p-carousel-nav-prev:hover,
 .p-carousel .p-carousel-nav-next:hover {
-  background-color: #004d40;
+background-color: #004d40;
 }
 
 .p-carousel .p-carousel-nav-prev .p-carousel-nav-icon,
 .p-carousel .p-carousel-nav-next .p-carousel-nav-icon {
-  color: white;
+color: white;
 }
 
-/* Media Queries */
+/* Media Queries para pantallas más pequeñas */
 @media (max-width: 1200px) {
-  .custom-carousel {
-    padding: 20px;
-  }
+.custom-carousel {
+  padding: 20px;
+}
 
-  .p-carousel .p-carousel-item {
-    height: 300px;
-  }
+.p-carousel .p-carousel-item {
+  height: 300px;
+}
 
-  .custom-thumbnail img {
-    width: 100px;
-    height: 100px;
-  }
+.custom-thumbnail img {
+  width: 100px;
+  height: 100px;
+}
 }
 
 @media (max-width: 992px) {
-  .p-carousel .p-carousel-item {
-    height: 250px;
-  }
+.p-carousel .p-carousel-item {
+  height: 250px;
+}
 
-  .custom-thumbnail img {
-    width: 90px;
-    height: 80px;
-  }
+.custom-thumbnail img {
+  width: 90px;
+  height: 80px;
+}
 }
 
 @media (max-width: 768px) {
-  .p-carousel .p-carousel-item {
-    height: 200px;
-  }
-
-  .custom-thumbnail img {
-    width: 90px;
-    height: 60px;
-  }
+.p-carousel .p-carousel-item {
+  height: 200px;
 }
 
-@media (max-width: 576px) {
-  .custom-carousel {
-    padding: 100px;
-  }
+.custom-thumbnail img {
+  width: 90px;
+  height: 60px;
+}
+}
 
-  .p-carousel .p-carousel-item {
-    height: 180px;
-  }
+@media (max-width: 676px) {
+.carousel-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenedor */
+  align-items: center; /* Centra verticalmente el contenedor */
+  margin-left: 0; /* Sin desplazamiento a la izquierda en móviles */
+  margin-top: 0; /* Sin desplazamiento hacia arriba en móviles */
+  padding: 0; /* Reduce el padding para maximizar el espacio */
+  width: 100%; /* Asegúrate de que ocupe el ancho completo */
+  height: 100vh; /* Asegúrate de que ocupe la altura completa */
+  box-sizing: border-box; /* Para que el padding no afecte el tamaño */
+}
 
-  .custom-thumbnail img {
-    width: 60px;
-    height: 50px;
-  }
+.custom-carousel {
+  max-width: 100%; /* Ocupa el 100% del ancho disponible */
+  padding: 10px; /* Reduce el padding en móviles */
+  display: flex;
+  justify-content: center; /* Centra el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.p-carousel .p-carousel-item {
+  height: 180px;
+}
+
+.custom-thumbnail img {
+  width: 60px;
+  height: 50px;
+}
 }

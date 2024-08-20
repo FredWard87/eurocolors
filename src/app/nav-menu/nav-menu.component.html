@@ -5,10 +5,12 @@
     <li><a routerLink="/acerca" routerLinkActive="active">Acerca de</a></li>
     <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
     <li>
-      <a href="#" (click)="toggleCatalogoProductosSubMenu()">Productos</a>
-      <ul *ngIf="showCatalogoProductosSubMenu">
+      <a href="#" class="has-submenu" (click)="toggleCatalogoProductosSubMenu($event)">
+        Productos <i class="pi pi-angle-down"></i>
+      </a>
+      <ul [ngClass]="{'submenu': true, 'active': showCatalogoProductosSubMenu}">
         <li><a routerLink="/pigmentos" routerLinkActive="active">Pigmentos</a></li>
-        <li><a routerLink="/colores-pasta" routerLinkActive="active">Colores de Pasta</a></li>
+        <li><a routerLink="/colores-pasta" routerLinkActive="active">Colores para Pasta</a></li>
         <li><a routerLink="/granilla" routerLinkActive="active">Granilla</a></li>
         <li><a routerLink="/esmaltes" routerLinkActive="active">Esmaltes</a></li>
         <li><a routerLink="/materias-primas" routerLinkActive="active">Materias Primas</a></li>
