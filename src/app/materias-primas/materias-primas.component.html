@@ -2,7 +2,7 @@
   <h1>MATERIAS PRIMAS</h1>
   
 </div>
-<input type="text" class="search-box" placeholder="Buscar..." (input)="searchProduct($event)">
+
 <div class="catalog-container">
   <div *ngFor="let producto of filteredProductosMateriasPrimas" class="product-card">
     <img [src]="producto.itemImageSrc" [alt]="producto.alt" [title]="producto.title" class="product-image" />
