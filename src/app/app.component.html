@@ -3,7 +3,7 @@
     <img src="assets/images/eurocolor.png" alt="Logo de Eurocolor" class="logo-elegante" />
     
     <div class="search-container">
-      
+      <!-- Aquí puedes agregar el contenido de búsqueda si es necesario -->
     </div>
     
     <a href="assets/Catalogó de productos Eurocolor.pdf" class="download-button" download>Descargar Catálogo</a>
@@ -13,26 +13,7 @@
     <div class="lateral">
       <app-nav-menu></app-nav-menu>
     </div>
-    
-    <div class="central">
-      <div id="productList">
-        <div *ngFor="let producto of filteredProductos" class="product-card">
-          <div class="product-title">{{ producto.title }}</div>
-          <div class="product-description">{{ producto.description }}</div>
-        </div>
-      </div>
-      
-      <div class="catalog-container">
-        <div *ngFor="let producto of filteredProductosPigmentos" class="product-card">
-          <img [src]="producto.itemImageSrc" [alt]="producto.alt" [title]="producto.title" class="product-image" />
-          <div class="product-info">
-            <h3 class="product-name">{{ producto.title }}</h3>
-            <p class="product-code">{{ producto.alt }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+
     <router-outlet></router-outlet>
   </div>
 </div>
@@ -42,6 +23,7 @@
     <p>&copy; 2024 Eurocolor</p>
   </footer>
 </div>
+
 
 
 
