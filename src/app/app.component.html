@@ -1,45 +1,47 @@
-<body>
-  <div class="main">
-    <div class="header header-flex">
-      <img src="assets/images/eurocolor.png" alt="Logo de Eurocolor" class="logo-elegante" />
-      <div class="spacer"></div>
+<div class="main">
+  <div class="header header-flex">
+    <img src="assets/images/eurocolor.png" alt="Logo de Eurocolor" class="logo-elegante" />
+    
+    <div class="search-container">
       
-
-
-      <a href="assets/Catalogó de productos Eurocolor.pdf" class="download-button" download>Descargar Catálogo</a>
     </div>
-
-    <div class="content">
-      <div class="lateral">
-        <app-nav-menu></app-nav-menu>
-      </div>
-      <div class="central">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-
-    <div class="footer">
-      <footer>
-        <!-- Contenido del pie de página si es necesario -->
-        <p>&copy; 2024 Eurocolor</p>
-      </footer>
-    </div>
+    
+    <a href="assets/Catalogó de productos Eurocolor.pdf" class="download-button" download>Descargar Catálogo</a>
   </div>
 
-  <script>
-    function searchProduct() {
-      let searchText = document.getElementById("searchInput").value.toLowerCase();
-      let products = document.querySelectorAll(".product");
+  <div class="content">
+    <div class="lateral">
+      <app-nav-menu></app-nav-menu>
+    </div>
+    
+    <div class="central">
+      <div id="productList">
+        <div *ngFor="let producto of filteredProductos" class="product-card">
+          <div class="product-title">{{ producto.title }}</div>
+          <div class="product-description">{{ producto.description }}</div>
+        </div>
+      </div>
+      
+      <div class="catalog-container">
+        <div *ngFor="let producto of filteredProductosPigmentos" class="product-card">
+          <img [src]="producto.itemImageSrc" [alt]="producto.alt" [title]="producto.title" class="product-image" />
+          <div class="product-info">
+            <h3 class="product-name">{{ producto.title }}</h3>
+            <p class="product-code">{{ producto.alt }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <router-outlet></router-outlet>
+  </div>
+</div>
 
-      products.forEach(function(product) {
-        let productName = product.querySelector(".product-name").textContent.toLowerCase();
+<div class="footer">
+  <footer>
+    <p>&copy; 2024 Eurocolor</p>
+  </footer>
+</div>
 
-        if (productName.includes(searchText)) {
-          product.style.display = "";
-        } else {
-          product.style.display = "none";
-        }
-      });
-    }
-  </script>
-</body>
+
+

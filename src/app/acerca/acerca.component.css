@@ -90,8 +90,33 @@ body {
         padding: 15px;
         max-width: 100%; /* Asegura que los elementos usen el 100% del ancho disponible */
     }
+
+    .empresa h1 {
+        font-size: 2rem; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .antecedentes h2, .mision-vision-valores h2, .politica h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+    }
+
+    .valores ul li {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto de los elementos de lista */
+    }
 }
 
 .custom-sidebar h3, .custom-sidebar ul li a {
     text-transform: capitalize;
+}
+
+.custom-sidebar {
+    /* Ensure the sidebar takes appropriate space on smaller screens */
+    width: 100%;
+    max-width: 300px; /* Optional: adjust based on your design */
+}
+
+@media (max-width: 768px) {
+    .custom-sidebar {
+        width: 100%;
+        /* Ensure the sidebar fits within smaller screens */
+    }
 }

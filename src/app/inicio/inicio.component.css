@@ -23,7 +23,7 @@
 }
 
 .sidebar li {
-  padding: 15px;
+  padding: 20px; /* Reducido para mejorar el diseño */
   cursor: pointer;
 }
 
@@ -31,19 +31,33 @@
   background-color: #444;
 }
 
+.carousel-container {
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido se alinee verticalmente */
+  justify-content: center; /* Centra horizontalmente el contenedor */
+  align-items: center; /* Centra verticalmente el contenedor */
+  width: calc(100% - 200px); /* Ancho completo menos el sidebar */
+  height: 80vh; /* Altura completa de la ventana */
+  margin-left: 30px; /* Espacio a la izquierda para el sidebar */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  padding: 20px; /* Espaciado alrededor del contenedor */
+}
+
 /* Estilo para el carousel */
 .custom-carousel {
-  margin: 20px auto;
+  max-width: 900px; /* Ancho máximo del carrusel */
+  width: 100%; /* Ocupa el 100% del contenedor */
   padding: 20px;
   background-color: rgba(242, 244, 246, 0.7);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  max-width: 1000px;
-  width: 100%;
   box-sizing: border-box;
-  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  justify-content: center; /* Centra el contenido dentro del carrusel */
+  align-items: center; /* Centra verticalmente el contenido del carrusel */
 }
 
+/* Animación de desvanecimiento */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -53,12 +67,18 @@
   }
 }
 
+.custom-carousel {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilos para los elementos del carrusel */
 .p-carousel .p-carousel-item {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
 }
 
 .p-carousel .p-carousel-item img {
@@ -88,6 +108,7 @@
   transform: scale(1.1);
 }
 
+/* Estilos para los botones de navegación del carrusel */
 .p-carousel .p-carousel-nav-prev,
 .p-carousel .p-carousel-nav-next {
   background-color: #00796b;
@@ -114,7 +135,7 @@
 /* Media Queries */
 @media (max-width: 1200px) {
   .custom-carousel {
-    padding: 15px;
+    padding: 20px;
   }
 
   .p-carousel .p-carousel-item {
@@ -133,7 +154,7 @@
   }
 
   .custom-thumbnail img {
-    width: 80px;
+    width: 90px;
     height: 80px;
   }
 }
@@ -144,14 +165,14 @@
   }
 
   .custom-thumbnail img {
-    width: 60px;
+    width: 90px;
     height: 60px;
   }
 }
 
 @media (max-width: 576px) {
   .custom-carousel {
-    padding: 10px;
+    padding: 100px;
   }
 
   .p-carousel .p-carousel-item {
@@ -159,9 +180,7 @@
   }
 
   .custom-thumbnail img {
-    width: 50px;
+    width: 60px;
     height: 50px;
   }
 }
-
-

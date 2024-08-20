@@ -1,15 +1,15 @@
 .container {
-  max-width: 1200px; /* Asegura que el contenedor sea lo suficientemente ancho */
+  max-width: 1200px; /* Maximum width for large screens */
   margin: 40px auto;
   padding: 40px;
-  background-color: #dde0e3; /* Fondo claro */
+  background-color: #dde0e3; /* Light background */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   animation: slideIn 1s ease-in-out;
   display: flex;
-  flex-direction: row; /* Alinea las sucursales horizontalmente */
-  justify-content: space-between; /* Espacio uniforme entre las sucursales */
-  flex-wrap: wrap; /* Permite el ajuste en pantallas más pequeñas */
+  flex-direction: row; /* Horizontal layout for branches */
+  justify-content: space-between; /* Even spacing between branches */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .sucursal {
@@ -18,54 +18,64 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1.5s ease-in-out;
-  flex: 1; /* Hace que todas las sucursales tengan el mismo tamaño */
-  margin: 10px; /* Espacio entre las sucursales */
-  min-width: 300px; /* Ancho mínimo para mantener una presentación decente */
+  flex: 1; /* Equal size for all branches */
+  margin: 10px; /* Space between branches */
+  min-width: 300px; /* Minimum width to ensure decent presentation */
 }
 
 .sucursal h2 {
   font-size: 1.8rem;
-  color: #000000; /* Color de texto */
-  border-bottom: 3px solid #000000; /* Línea debajo del título */
+  color: #000000; /* Text color */
+  border-bottom: 3px solid #000000; /* Line under the title */
   padding-bottom: 10px;
   margin-bottom: 15px;
   font-weight: bold;
-  text-transform: capitalize; /* Ajustar para mayúscula inicial */
+  text-transform: capitalize; /* Capitalize first letter */
 }
 
 .sucursal p {
   margin: 10px 0;
   line-height: 1.8;
-  color: #000000; /* Color de texto */
+  color: #000000; /* Text color */
 }
 
 .sucursal p strong {
   display: block;
   font-size: 1.2rem;
-  color: #000000; /* Color de texto */
+  color: #000000; /* Text color */
   margin-bottom: 6px;
 }
 
-/* Media Queries para Responsividad */
+/* Media Queries for Responsiveness */
 
-/* Ajustes para pantallas grandes (escritorios) */
+/* Adjustments for large screens (desktops) */
 @media (min-width: 1200px) {
+  .container {
+    flex-direction: row; /* Ensure horizontal layout on large screens */
+  }
+
   .sucursal {
-    flex: 1; /* Mantenemos el tamaño uniforme */
+    min-width: 300px; /* Maintain minimum width */
   }
 }
 
-/* Ajustes para pantallas medianas (tabletas y móviles grandes) */
+/* Adjustments for medium screens (tablets and large mobiles) */
 @media (max-width: 1199px) {
   .sucursal {
-    min-width: 250px; /* Ajusta el ancho mínimo en pantallas más pequeñas */
+    min-width: 250px; /* Adjust minimum width for smaller screens */
   }
 }
 
-/* Ajustes para pantallas pequeñas (móviles) */
+/* Adjustments for small screens (mobiles) */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
-    align-items: center; /* Centra las sucursales verticalmente */
+    flex-direction: column; /* Vertical layout for small screens */
+    align-items: center; /* Center branches vertically */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .sucursal {
+    width: 100%; /* Ensure branches take full width */
+    max-width: 600px; /* Optional: set max-width for better readability */
   }
 }

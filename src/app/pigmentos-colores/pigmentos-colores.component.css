@@ -1,8 +1,9 @@
+/* Estilos Globales */
 body {
   font-family: Arial, sans-serif;
   background-color: #000000;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .header-container {
@@ -15,7 +16,7 @@ body {
 }
 
 .header-container h1 {
-  margin: 0;
+  margin: 10;
   font-size: 2.5rem;
   color: #000000;
 }
@@ -24,9 +25,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
-  padding: 20px;
+  padding: 30px;
   background-color: #dde0e3c4;
+  justify-content: flex-start; /* Alinea los productos a la izquierda */
+  margin: 10 auto; /* Asegura que el contenedor esté centrado horizontalmente */
+  max-width: 1200px; /* Limita el ancho del contenedor para mayor control */
 }
 
 .product-card {
@@ -38,6 +41,11 @@ body {
   height: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 1s ease-in-out;
+  opacity: 1; /* Asegura que las tarjetas visibles tengan opacidad completa */
+}
+
+.product-card.hidden {
+  display: none; /* Oculta las tarjetas sin eliminarlas del DOM */
 }
 
 .product-card:hover {
@@ -53,7 +61,7 @@ body {
 }
 
 .product-info {
-  padding: 15px;
+  padding: 25px;
   text-align: center;
 }
 
@@ -72,19 +80,19 @@ body {
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
   .product-card {
-    width: calc(25% - 20px); /* 4 tarjetas por fila */
+    width: calc(15% - 10px); /* 4 tarjetas por fila */
   }
 }
 
@@ -114,7 +122,7 @@ body {
   }
 
   .catalog-container {
-    padding: 10px; /* Reduce el padding en dispositivos pequeños */
+    padding: 15px; /* Reduce el padding en dispositivos pequeños */
   }
 }
 
